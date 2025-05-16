@@ -50,7 +50,7 @@
     async function obterNumeros() {
       try {
         console.log('Iniciando requisição ao webhook...');
-        const response = await fetch('http://localhost:5678/webhook/Pedro Lucas', {
+        const response = await fetch('http://localhost:5678/webhook/pressel', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -74,13 +74,13 @@
       try {
         const numeros = await obterNumeros();
         const numeroAleatorio = numeros[Math.floor(Math.random() * numeros.length)];
-        const url = `https://api.whatsapp.com/send?phone=${numeroAleatorio}&text=E%20aí,%20quero%20conversar!`;
+        const url = `https://api.whatsapp.com/send?phone=${numeroAleatorio}&text=E%20aí,%20quero%20conversar%20com%20você!`;
         console.log('Redirecionando para:', url);
         window.location.href = url;
       } catch (error) {
         console.error('Erro ao obter os números ou redirecionar:', error);
         // URL de fallback em caso de erro
-        window.location.href = 'https://api.whatsapp.com/send?phone=5543984177822&text=E%20aí,%20quero%20conversar!`;
+        window.location.href = 'https://api.whatsapp.com/send?phone=5543984177822&text=E%20aí,%20quero%20conversar%20com%20você!';
       }
     }
 
@@ -95,14 +95,14 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'IDIDIDIDID');
+    fbq('init', 'SEUPIXEL');
     fbq('track', 'Pageview');
   </script>
 
 </head>
 <body onload="redirecionar(); enviarPixel();">
   <div class="loading-container">
-    <h1>Aguarde alguns segundos...</h1>
+    <h1>Aguarde um momento por favor...</h1>
     <div class="loading"></div>
   </div>
 </body>
